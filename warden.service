@@ -1,0 +1,11 @@
+[Unit]
+Description=online hosts manager and warden for intranet
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/warden --config=/etc/warden.conf
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

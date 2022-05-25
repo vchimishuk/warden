@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+export DH_OPTIONS
+export DH_GOPKG := github.com/vchimishuk/warden
+
+BUILD_DIR=`pwd`/obj
+
+%:
+	dh $@ --buildsystem=golang --builddirectory=$(BUILD_DIR)
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f warden
+	rm -rf $(BUILD_DIR)
+
+override_dh_auto_build:
+	GOPATH=$(BUILD_DIR) go get -v github.com/vchimishuk/opt
+	GOPATH=$(BUILD_DIR) go get -v github.com/vchimishuk/config
+	dh_auto_build
+
+override_dh_auto_test:
+	echo skip
+
+override_dh_auto_install:
+	install -g 0 -o 0 -d debian/warden
+
+	install -g 0 -o 0 -d debian/warden/usr/bin
+	cp warden debian/warden/usr/bin
+	install -g 0 -o 0 -d debian/warden/etc
+	cp warden.conf debian/warden/etc
+	install -g 0 -o 0 -d debian/warden/lib/systemd/system/
+	cp warden.service debian/warden/lib/systemd/system/

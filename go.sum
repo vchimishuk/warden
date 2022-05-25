@@ -1,0 +1,6 @@
+github.com/vchimishuk/config v0.0.0-20220522214418-cd69f3f4eaf8 h1:dfoiUAzI1ilbBk2OVzxvEzdU5SZXEjqAM8rvnMBaiNc=
+github.com/vchimishuk/config v0.0.0-20220522214418-cd69f3f4eaf8/go.mod h1:4/fxN1V3/I1ujlZv5gf0KzQOv3/4nObqzqvkC4uf3X4=
+github.com/vchimishuk/opt v0.0.0-20160918213041-e09d5e511662 h1:lfnqx9S4HdQgBI2bcBvo5736IA2+2nGMT8z2JrIKy50=
+github.com/vchimishuk/opt v0.0.0-20160918213041-e09d5e511662/go.mod h1:nas1Wr+WMtxTzFZ5h/Sotm1LIcrEdzjvAp7tl3782Ng=
+golang.org/x/exp v0.0.0-20220518171630-0b5c67f07fdf h1:oXVg4h2qJDd9htKxb5SCpFBHLipW6hXmL3qpUixS2jw=
+golang.org/x/exp v0.0.0-20220518171630-0b5c67f07fdf/go.mod h1:yh0Ynu2b5ZUe3MQfp2nM0ecK7wsgouWTDN0FNeJuIys=

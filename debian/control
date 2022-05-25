@@ -1,0 +1,12 @@
+Source: warden
+Section: main
+Priority: optional
+Maintainer: Viacheslav Chimishuk <vchimishuk@yandex.ru>
+Build-Depends: debhelper (>=9), golang-go, dh-golang
+Standards-Version: 3.9.4
+Homepage: https://github.com/vchimishuk/warden
+
+Package: warden
+Architecture: all
+Depends:
+Description: online hosts manager and warden for intranet
